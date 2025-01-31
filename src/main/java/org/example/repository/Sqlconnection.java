@@ -41,11 +41,11 @@ public class Sqlconnection {
 
         String createTasksTable = "CREATE TABLE IF NOT EXISTS tasks ("
                 + "id INTEGER PRIMARY KEY AUTOINCREMENT,"
-                + "title TEXT NOT NULL,"  // nome -> title
+                + "title TEXT NOT NULL,"
                 + "description TEXT NOT NULL,"
                 + "status TEXT NOT NULL,"
                 + "priority TEXT NOT NULL,"
-                + "due_date TIMESTAMP NOT NULL,"  // data_termino -> due_date
+                + "due_date TIMESTAMP NOT NULL,"
                 + "user_id INTEGER NOT NULL,"
                 + "category TEXT NOT NULL,"
                 + "FOREIGN KEY(user_id) REFERENCES users(id)"
