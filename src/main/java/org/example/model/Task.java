@@ -7,67 +7,67 @@ import java.time.LocalDate;
 
 public class Task {
     private long id;
-    private String nome;
-    private String descricao;
-    private LocalDate dataTermino;
+    private String title;
+    private String description;
+    private LocalDate dueDate;
     private StatusEnum status;
     private PriorityEnum priority;
-    private String categoria;
-    private long idUsuario;
+    private String category;
+    private long userId;
 
-    public Task(long id, String nome, String descricao, LocalDate dataTermino,
-                StatusEnum status, PriorityEnum priority, String categoria, long idUsuario) {
+    public Task(long id, String title, String description, LocalDate dueDate,
+                StatusEnum status, PriorityEnum priority, String category, long userId) {
         this.id = id;
-        this.nome = nome;
-        this.descricao = descricao;
-        this.dataTermino = dataTermino;
+        this.title = title;
+        this.description = description;
+        this.dueDate = dueDate;
         this.status = status;
         this.priority = priority;
-        this.categoria = categoria;
-        this.idUsuario = idUsuario;
+        this.category = category;
+        this.userId = userId;
     }
 
-    public Task(String nome, String descricao, long userId, LocalDate dataTermino,
-                StatusEnum status, PriorityEnum priority, String categoria) {
-        this.nome = nome;
-        this.descricao = descricao;
-        this.idUsuario = userId;
-        this.dataTermino = dataTermino;
+    public Task(String title, String description, long userId, LocalDate dueDate,
+                StatusEnum status, PriorityEnum priority, String category) {
+        this.title = title;
+        this.description = description;
+        this.userId = userId;
+        this.dueDate = dueDate;
         this.status = status;
         this.priority = priority;
-        this.categoria = categoria;
+        this.category = category;
     }
 
     public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
-    public String getNome() {
-        return nome;
+    public String getTitle() {
+        return title;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public String getDescricao() {
-        return descricao;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public LocalDate getDataTermino() {
-        return dataTermino;
+    public LocalDate getDueDate() {
+        return dueDate;
     }
 
-    public void setDataTermino(LocalDate dataTermino) {
-        this.dataTermino = dataTermino;
+    public void setDueDate(LocalDate dueDate) {
+        this.dueDate = dueDate;
     }
 
     public StatusEnum getStatus() {
@@ -86,31 +86,31 @@ public class Task {
         this.priority = priority;
     }
 
-    public String getCategoria() {
-        return categoria;
+    public String getCategory() {
+        return category;
     }
 
-    public void setCategoria(String categoria) {
-        this.categoria = categoria;
+    public void setCategory(String category) {
+        this.category = category;
     }
 
-    public long getIdUsuario() {
-        return idUsuario;
+    public long getUserId() {
+        return userId;
     }
 
-    public void setIdUsuario(long idUsuario) {
-        this.idUsuario = idUsuario;
+    public void setUserId(long userId) {
+        this.userId = userId;
     }
 
     @Override
     public String toString() {
-        return "TaskDTO {" +
-                "\n  Categoria: '" + categoria + '\'' +
-                ",\n  Prioridade: " + priority +
+        return "Task {" +
+                "\n  Category: '" + category + '\'' +
+                ",\n  Priority: " + priority +
                 ",\n  Status: " + status +
-                ",\n  Data de Término: " + dataTermino +
-                ",\n  Descrição: '" + descricao + '\'' +
-                ",\n  Nome: '" + nome + '\'' +
+                ",\n  Due Date: " + dueDate +
+                ",\n  Description: '" + description + '\'' +
+                ",\n  Title: '" + title + '\'' +
                 "\n}";
     }
 }

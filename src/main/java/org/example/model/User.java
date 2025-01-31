@@ -2,32 +2,32 @@ package org.example.model;
 
 public class User {
     private long id;
-    private String nome;
+    private String name;
     private String email;
-    private String senha;
+    private String password;
 
-    public User(long id, String nome, String email, String senha) {
+    public User(long id, String name, String email, String password) {
         this.id = id;
-        this.nome = nome;
+        this.name = name;
         this.email = email;
-        this.senha = senha;
+        this.password = password;
     }
 
-    public User(String nome, String email, String senha) {
-        this.nome = nome;
+    public User(String name, String email, String password) {
+        this.name = name;
         this.email = email;
-        this.senha = senha;
+        this.password = password;
     }
 
-    public User(String email, String senha) {
+    public User(String email, String password) {
         this.email = email;
-        this.senha = senha;
+        this.password = password;
     }
 
-    public User(long id, String email, String senha) {
+    public User(long id, String email, String password) {
         this.id = id;
         this.email = email;
-        this.senha = senha;
+        this.password = password;
     }
 
     public long getId() {
@@ -38,12 +38,12 @@ public class User {
         this.id = id;
     }
 
-    public String getNome() {
-        return nome;
+    public String getName() {
+        return name;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getEmail() {
@@ -54,23 +54,20 @@ public class User {
         this.email = email;
     }
 
-    public String getSenha() {
-        return senha;
+    public String getPassword() {
+        return password;
     }
 
-    public void setSenha(String senha) {
-        this.senha = senha;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     @Override
     public String toString() {
         return "UserDTO{" +
-                "nome='" + nome + '\'' +
+                "name='" + name + '\'' +
                 ", email='" + email + '\'' +
-                ", senha='" + senha + '\'' +
+                ", password='" + password + '\'' +
                 '}';
     }
-
-
-
 }
