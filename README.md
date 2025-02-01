@@ -9,7 +9,7 @@
   - Categoria
   - Status (TODO, DOING, DONE)
   - Data de término
-- Tarefas podem ser ordenadas por prioridade, categoria ou status.
+- Tarefas podem ser ordenadas por prioridade, categoria, status ou data de término.
 - Persistência dos dados usando SQLite, garantindo que as tarefas não sejam perdidas ao fechar o programa.
 
 # Pré-requisitos
