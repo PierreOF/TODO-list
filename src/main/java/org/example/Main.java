@@ -1,7 +1,23 @@
 package org.example;
 
+import org.example.repository.Sqlconnection;
+import org.example.repository.TaskDAO;
+import org.example.repository.UserDAO;
+import org.example.view.UserView;
+
+import java.sql.Connection;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Sqlconnection.createTables();
+
+        Connection conn = Sqlconnection.connect();
+        UserDAO usuarioProxy = new UserDAO(conn);
+        TaskDAO taskProxy = new TaskDAO(conn);
+
+        UserView usuarioView = new UserView(conn);
+        usuarioView.menu();
+
+        Sqlconnection.close();
     }
 }
