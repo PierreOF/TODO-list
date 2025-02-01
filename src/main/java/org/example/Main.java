@@ -12,8 +12,6 @@ public class Main {
         Sqlconnection.createTables();
 
         Connection conn = Sqlconnection.connect();
-        UserDAO usuarioProxy = new UserDAO(conn);
-        TaskDAO taskProxy = new TaskDAO(conn);
 
         UserView usuarioView = new UserView(conn);
         usuarioView.menu();
