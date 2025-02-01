@@ -1,8 +1,7 @@
 package org.example;
 
 import org.example.repository.Sqlconnection;
-import org.example.repository.TaskDAO;
-import org.example.repository.UserDAO;
+
 import org.example.view.UserView;
 
 import java.sql.Connection;
