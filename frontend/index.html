@@ -46,7 +46,7 @@
     <!-- Ordenação -->
     <div class="sort-options">
         <label for="sort-tasks">Sort by:</label>
-        <select id="sort-tasks">
+        <select id="sort-tasks" onchange="renderTasks()">
             <option value="priority">Priority</option>
             <option value="status">Status</option>
         </select>
@@ -59,7 +59,7 @@
 <!-- Task Modal -->
 <div id="task-modal" class="modal">
     <div class="modal-content">
-        <span class="close">&times;</span>
+        <span class="close" onclick="closeModal()">&times;</span>
         <h2>Task Details</h2>
         <p><strong>Title:</strong> <span id="modal-task-title"></span></p>
         <p><strong>Description:</strong> <span id="modal-task-desc"></span></p>
