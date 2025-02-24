@@ -2,9 +2,74 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO List</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+<div class="container">
+    <h1>TODO List</h1>
 
+    <!-- Form for adding/editing tasks -->
+    <div class="task-form">
+        <label for="task-title">Task Title:</label>
+        <input type="text" id="task-title" placeholder="Enter task title" required>
+
+        <label for="task-desc">Description:</label>
+        <textarea id="task-desc" placeholder="Enter task description" required></textarea>
+
+        <label for="task-due-date">Due Date:</label>
+        <input type="date" id="task-due-date" required>
+
+        <label for="task-priority">Priority:</label>
+        <select id="task-priority">
+            <option value="LOW">Low</option>
+            <option value="NORMAL">Normal</option>
+            <option value="IMPORTANT">Important</option>
+            <option value="VERY IMPORTANT">Very Important</option>
+            <option value="CRITICAL">Critical</option>
+        </select>
+
+        <label for="task-category">Category:</label>
+        <input type="text" id="task-category" placeholder="Enter category">
+
+        <label for="task-status">Status:</label>
+        <select id="task-status">
+            <option value="TODO">TODO</option>
+            <option value="DOING">DOING</option>
+            <option value="DONE">DONE</option>
+        </select>
+
+        <button id="save-task-btn">Save Task</button>
+    </div>
+
+    <!-- Ordenação -->
+    <div class="sort-options">
+        <label for="sort-tasks">Sort by:</label>
+        <select id="sort-tasks">
+            <option value="priority">Priority</option>
+            <option value="status">Status</option>
+        </select>
+    </div>
+
+    <!-- Task List -->
+    <ul id="task-list"></ul>
+</div>
+
+<!-- Task Modal -->
+<div id="task-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Task Details</h2>
+        <p><strong>Title:</strong> <span id="modal-task-title"></span></p>
+        <p><strong>Description:</strong> <span id="modal-task-desc"></span></p>
+        <p><strong>Due Date:</strong> <span id="modal-task-due-date"></span></p>
+        <p><strong>Priority:</strong> <span id="modal-task-priority"></span></p>
+        <p><strong>Category:</strong> <span id="modal-task-category"></span></p>
+        <p><strong>Status:</strong> <span id="modal-task-status"></span></p>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
 </body>
 </html>
