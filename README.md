@@ -12,6 +12,13 @@
 - Tarefas podem ser ordenadas por prioridade, categoria, status ou data de término.
 - Persistência dos dados usando SQLite, garantindo que as tarefas não sejam perdidas ao fechar o programa.
 
+# Tecnologias utilizadas
+ - Frontend
+   - Html, Css e JavaScript
+
+ - Backend
+   - Java
+
 # Pré-requisitos
 
 - Java 17 ou superior
